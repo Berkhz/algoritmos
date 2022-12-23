@@ -35,8 +35,32 @@ function lerVariaveis() // Para invocar a função e testar utilize o comando ->
     console.log(repetir())
 
     function repetir()
+    {
     confirm("Deseja continuar?");
     if (bool = true) {
         console.log(lerVariaveis);
+        };
     };
 };
+
+//  3) AREA = (BASE x ALTURA) / 2. Área de um Triângulo
+
+function areaTriangulo() // Para invocar a função e testar utilize o comando -> console.log(areaTriangulo())
+{
+    var base = prompt("Escreva o valor da base do triângulo: ");
+    var altura = prompt("Agora escreva o valor da altura: ");
+    var valor = Number(base) + Number(altura);
+    alert ("A área do triângulo é de: " + valor / 2);
+};
+
+// 4) CAC = 3.1416 * R². Lembre-se que R² é o mesmo que (R * R). Área de um Círculo 
+
+function areaCirculo() // Para invocar a função e testar utilize o comando -> console.log(areaCirculo())
+{
+    const pi = 3.1416
+    var raio = prompt("Informe o raio do círculo: ");
+    var resultado = pi * Number(Math.pow(raio, 2)); // Math.pow = recebe a base e multiplica o valor ao exponente
+    alert ("A área de um círculo é de: " + resultado.toFixed(2)); // toFixed() = define a quantidade de casas decimais após a vírgula
+}
+
+// 5) CPC = 3.1416 * D, sendo que D = R + R. Perímetro de Círculo
