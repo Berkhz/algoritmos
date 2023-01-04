@@ -61,6 +61,83 @@ function areaCirculo() // Para invocar a função e testar utilize o comando -> 
     var raio = prompt("Informe o raio do círculo: ");
     var resultado = pi * Number(Math.pow(raio, 2)); // Math.pow = recebe a base e multiplica o valor ao exponente
     alert ("A área de um círculo é de: " + resultado.toFixed(2)); // toFixed() = define a quantidade de casas decimais após a vírgula
-}
+};
 
 // 5) CPC = 3.1416 * D, sendo que D = R + R. Perímetro de Círculo
+
+function perimetroCirculo() // Para invocar a função e testar utilize o comando -> console.log(perimetroCirculo())
+{
+    const pi = 3.1416
+    var d = prompt("Informe o diâmetro do círculo: "); // d = diâmetro
+    var resultado = (d * 2) * pi;
+    alert ("O perímetro do círculo é de: " + resultado.toFixed(2)); // toFixed() = define a quantidade de casas decimais após a vírgula
+};
+
+// 6) CVC = (3.1416 * R²) * H Volume de Círculo
+
+function volumeCirculo() // Para invocar a função e testar utilize o comando -> console.log(volumeCirculo())
+{
+    const pi = 3.1416
+    var r = prompt("Informe o raio do círculo: "); // r = raio
+    var h = prompt("Informe a altura do círculo: "); // h = height
+    var resultado = ((pi * Math.pow(r, 2)) * h); // Primeiro multipliquei o pi + o raio ao quadrado, logo após multipliquei a altura
+    alert ("O volume do círculo é de: " + resultado.toFixed(2)); // toFixed() = define a quantidade de casas decimais após a vírgula
+};
+
+// 7) VCN = ((3.1416 * R²) / 3) * H Volume de um Cone
+
+function volumeCone() // Para invocar a função e testar utilize o comando -> console.log(volumeCone())
+{
+    const pi = 3.1416
+    var r = prompt("Informe o raio do cone: "); // r = raio
+    var h = prompt("Informe a altura do cone"); // h = altura
+    var resultado = ((pi * Math.pow(r, 2) / 3) * h);
+    alert ("O volume do cone é de: " + resultado.toFixed(2)); // toFixed() = define a quantidade de casas decimais após a vírgula
+};
+
+// 8) VPD = (L * L) * (H / 3) Volume de Pirâmide
+
+function volumePiramide() // Para invocar a função e testar utilize o comando -> console.log(volumePiramide())
+{
+    var lado = prompt("Informe o lado da pirâmide");
+    var h = prompt("Informe a altura da pirâmide"); // h = altura
+    var resultado = ((lado * lado) * (h / 3));
+    alert ("O volume da pirâmide é de: " + resultado);
+};
+
+// 9) VPM = L1 * L2 * L3 Volume de Prisma
+
+function volumePrisma() // Para invocar a função e testar utilize o comando -> console.log(volumePrisma())
+{
+    var l1 = prompt("Informe o primeiro lado do prisma: ");
+    var l2 = prompt("Informe o segundo lado do prisma: ");
+    var l3 = prompt("Informe o terceiro lado do prisma: ");
+    var resultado = (l1 * l2 * l3);
+    alert ("O volume do prisma é de: " + resultado);
+};
+
+// 10) VEF = (4/3) * 3.1416) * R³ Volume de Esfera.
+
+function volumeEsfera() // Para invocar a função e testar utilize o comando -> console.log(volumeEsfera())
+{
+    var raio = prompt("Informe o raio da esfera: ");
+    var resultado = (((4/3) * 3.1416) * Math.pow(raio, 3));
+    alert ("O volume da esfera é de: " + resultado.toFixed(2));
+};
+
+// 11) Ler 3 notas e apresentar a média das mesmas.
+
+function mediaNotas() // Para invocar a função e testar utilize o comando -> console.log(mediaNotas())
+{
+    confirm ("Olá seja bem vindo(a) ao apresentador de média final!");
+    const nome = prompt("Qual o seu nome?");
+    var nota1 = prompt(nome + " informe a nota do primeiro trimestre: ");
+    var nota2 = prompt(nome + " me informe agora sua nota do segundo trimestre: ");
+    var nota3 = prompt(nome + " por fim a nota do terceiro trimestre: ");
+    var resultado = (nota1 + nota2 + nota3 / 3);
+    if (resultado >= 6) {
+        alert("Parabéns " + nome + "! você passou!");
+    }else{
+        alert("Que pena, " + nome + "você reprovou");
+    }
+};
