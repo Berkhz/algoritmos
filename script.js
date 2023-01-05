@@ -134,10 +134,13 @@ function mediaNotas() // Para invocar a função e testar utilize o comando -> c
     var nota1 = prompt(nome + " informe a nota do primeiro trimestre: ");
     var nota2 = prompt(nome + " me informe agora sua nota do segundo trimestre: ");
     var nota3 = prompt(nome + " por fim a nota do terceiro trimestre: ");
-    var resultado = (nota1 + nota2 + nota3 / 3);
-    if (resultado >= 6) {
-        alert("Parabéns " + nome + "! você passou!");
-    }else{
-        alert("Que pena, " + nome + "você reprovou");
+    var resultadoFinal = ((Number(nota1) + Number(nota2) + Number(nota3)) /3);
+    if (resultadoFinal <= 5) {
+        confirm("Que pena, " + nome + " você reprovou!");
+    } else {
+        confirm("Parabéns " + nome + "! você passou!")
     }
 };
+
+// "Parabéns " + nome + "! você passou!"
+// "Que pena, " + nome + " você reprovou!"
